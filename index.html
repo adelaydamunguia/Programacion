@@ -1,30 +1,44 @@
 <html>
 <head>
-	<title>Bienvenidos a la pagina</title>
-	<link rel="stylesheet" type="text/css" href="bootstrap.css"/>
-	<link rel="stylesheet" type="text/css" href="styles.css"/>
+<title>NECESITA VALIDAR SUS DATOS ANTES DE INGRESAR</title>
+<script>
+function ComprobarClave(){
+	clave1 = document.f1.clave1.value
+	clave2 = document.f1.clave2.value
 
 
+	if (clave1 == "adelayda" && clave2 == "munguia"){
+alert("Los datos coinciden...\n Bienvenido");
+	var href = "inicio.html";
+	window.location=href;
+	}
+
+	else{
+		alert("Las dos claves son distintas...\n Intentelo Nuevamente.");
+var href = "index.html"; 
+window.location=href;
+};
+
+}
+</script>
 </head>
-<body background="aes2.jpg">
-<header>
 
-<h4><center> CARPINTERIA</center> </h4>
-<h2> <center> "EL HORMIGO" </center></h2>
+<body
+	background="aes2.jpg">
 
-<nav>
-<center>	<a href="index.html" class="blacklink" > INICIO</a>&nbsp;
-	     <a href="NUESTRA HISTORIA PARA TI.html" class="blacklink" >HISTORIA</a>&nbsp;
-	     <a href="FILOSOFIA Y UBICACION.html" class="blacklink" >FILOSOFIA Y UBICACION</a>&nbsp;
-	     <a href="exa.html" clas="blacklink" >PRODUCTOS Y SERVICIOS</a>&nbsp;
-	     <a href="ade.html" clas="blacklink" > REGISTRATE</a>&nbsp; </center>
+	<h1><center>NECESITA VALIDAR SUS DATOS ANTES DE INGRESAR</center></h1>
+	<br>
+	Escribe la contraseña dos veces, una en cada campo, y pulsa el boton. Te dira si las dos son iguales.
 
-</nav>
+	<br>
+	<form action="" name="f1">
+		Contraseña: <input type="password" name="clave1" size="20">
+		<br>
+		Repite contraseña: <input type="password" name="clave2" size="20">
+		<br>
+		<input type="button" value="Comprobar si son iguales" onclick="ComprobarClave()">
 
+	</form>
 
-
-<nav>
-<center>	<img src="hormi.jpg" width="260" height="260"/> </center>
-</nav>
 </body>
 </html>
